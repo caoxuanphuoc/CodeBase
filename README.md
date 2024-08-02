@@ -1,7 +1,7 @@
 # CodeBase
 This source is code base for all app I will develop in the future 
 
-# Structor
+# Structure
 ## 1: CodeBase.Core
    This is project use to define entities, this project use [code first](https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database) so when define a class synonymous define a table in database 
 ## 2: CodeBase.EntityFrameworkCore
