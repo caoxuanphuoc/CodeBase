@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Codebase.Web.Host.props" />
-</Project>
