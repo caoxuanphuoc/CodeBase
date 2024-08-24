@@ -4,3 +4,14 @@
 
 /CodeBase/.vs
 /.vs
+/CodeBase/Codebase.Web.Host/obj/
+/CodeBase/CodeBase.Web.Host/bin/
+
+/CodeBase/Codebase.EntityFrameworkCore/obj/
+/CodeBase/CodeBase.EntityFrameworkCore/bin/
+
+/CodeBase/Codebase.Core/obj/
+/CodeBase/CodeBase.Core/bin/
+
+/CodeBase/Codebase.Service/obj/
+/CodeBase/CodeBase.Service/bin/
