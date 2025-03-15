@@ -15,3 +15,5 @@
 
 /CodeBase/Codebase.Service/obj/
 /CodeBase/CodeBase.Service/bin/
+/CodeBase/CodeBase.Test/bin/Debug/net8.0
+/CodeBase/CodeBase.Test/obj
