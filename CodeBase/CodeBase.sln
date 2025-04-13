@@ -11,6 +11,32 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeBase.Core", "CodeBase.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeBase.Service", "CodeBase.Service\CodeBase.Service.csproj", "{70CABF32-A79B-4355-9957-CE691D2C0D93}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{15DD565C-1DBA-450B-94EB-F8B3525E8206}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBase.Test", "CodeBase.Test\CodeBase.Test.csproj", "{F8E61219-2DBE-4A0D-9EF9-593CD7158E07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{293C7624-B53F-4C79-B0A3-03781D753608}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{31A0846A-4FE3-4DF4-A88A-68D9CA5832D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{D168B79E-FD99-4921-B727-15697A7488D3}"
+	ProjectSection(SolutionItems) = preProject
+		Document\Docs\over-view.md = Document\Docs\over-view.md
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rules", "Rules", "{53E2D47F-0BCB-4579-B129-F186E7FD8192}"
+	ProjectSection(SolutionItems) = preProject
+		.cursor\rules\break-down-rule.mdc = .cursor\rules\break-down-rule.mdc
+		.cursor\rules\implementation-rule.mdc = .cursor\rules\implementation-rule.mdc
+		.cursor\rules\tech-design-rule.mdc = .cursor\rules\tech-design-rule.mdc
+		TestRule.md = TestRule.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{357EE61B-7B7D-491C-AC4A-849841F701C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +59,19 @@ Global
 		{70CABF32-A79B-4355-9957-CE691D2C0D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70CABF32-A79B-4355-9957-CE691D2C0D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70CABF32-A79B-4355-9957-CE691D2C0D93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8E61219-2DBE-4A0D-9EF9-593CD7158E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8E61219-2DBE-4A0D-9EF9-593CD7158E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8E61219-2DBE-4A0D-9EF9-593CD7158E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8E61219-2DBE-4A0D-9EF9-593CD7158E07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8E61219-2DBE-4A0D-9EF9-593CD7158E07} = {15DD565C-1DBA-450B-94EB-F8B3525E8206}
+		{293C7624-B53F-4C79-B0A3-03781D753608} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{31A0846A-4FE3-4DF4-A88A-68D9CA5832D3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{D168B79E-FD99-4921-B727-15697A7488D3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26BA0EEA-5CE2-4D67-B82E-ED91662D94F3}

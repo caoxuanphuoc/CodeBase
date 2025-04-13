@@ -1,4 +1,4 @@
-﻿using Codebase.Web.Host.Controllers.Models;
+﻿ using Codebase.Web.Host.Controllers.Models;
 using CodeBase.Service.Handlers.V1.Example;
 using CodeBase.Service.Handlers.V1.Example.Dto;
 using Microsoft.AspNetCore.Http.HttpResults;
