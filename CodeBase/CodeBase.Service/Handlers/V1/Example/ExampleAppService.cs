@@ -29,6 +29,16 @@ namespace CodeBase.Service.Handlers.V1.Example
             var exampleEntity = _mapper.Map<ExampleEntity>(exampleDto);
 
             await _exampleRepository.AddAsync(exampleEntity);
+            try
+            {
+                await _unitOfWork.SaveChangesAsync();
+
+            }
+            catch (Exception ex)
+            {
+                // Handle exception, e.g., log it or rethrow
+                throw;
+            }
             await _unitOfWork.SaveChangesAsync();
             return _mapper.Map<ExampleDto>(exampleEntity);
 

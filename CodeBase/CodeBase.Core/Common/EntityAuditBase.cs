@@ -11,7 +11,7 @@ namespace CodeBase.Core.Common
     {
         public bool IsDeleted { get ; set ; } = false;
         public DateTimeOffset? DeletedDate { get ; set ; }
-        public DateTimeOffset CreatedDate { get ; set ; } = DateTimeOffset.Now;
+        public DateTimeOffset CreatedDate { get ; set ; } = DateTimeOffset.Now.ToUniversalTime();
         public DateTimeOffset? ModifiedDate { get ; set ; }
         public long? CreatedBy { get; set; } 
         public long? ModifiedBy { get ; set ; }

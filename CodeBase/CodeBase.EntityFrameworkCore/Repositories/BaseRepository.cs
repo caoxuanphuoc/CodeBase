@@ -26,7 +26,7 @@ namespace CodeBase.EntityFrameworkCore.Repositories
         public void DeleteAsync(TEntity entity)
         {
             entity.IsDeleted = true;
-            entity.DeletedDate = DateTime.Now;
+            entity.DeletedDate = DateTime.Now.ToUniversalTime();
             _context.Set<TEntity>().Update(entity);
         }
 
@@ -45,7 +45,7 @@ namespace CodeBase.EntityFrameworkCore.Repositories
 
         public void UpdateAsync(TEntity entity)
         {
-            entity.ModifiedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now.ToUniversalTime();
             _context.Set<TEntity>().Update(entity);
         }
     }

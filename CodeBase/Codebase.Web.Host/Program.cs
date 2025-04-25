@@ -3,6 +3,7 @@ using CodeBase.EntityFrameworkCore;
 using CodeBase.EntityFrameworkCore.Repositories;
 using CodeBase.EntityFrameworkCore.Repositories.UnitOfWork;
 using CodeBase.Service.Handlers.V1.Example;
+using CodeBase.Service.Handlers.V1.Student;
 using CodeBase.Service.Mapper;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,11 +13,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+// Add Memory Cache
+builder.Services.AddMemoryCache();
+
+//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+//builder.Services.AddDbContext<CodebBaseDbContext>(options =>
+//    options.UseSqlServer(connectionString));
 
 builder.Services.AddDbContext<CodebBaseDbContext>(options =>
-    options.UseSqlServer(connectionString));
-ConfigureServices( builder.Services, builder.Configuration);
+                options.UseNpgsql(
+                    builder.Configuration.GetConnectionString("Default"),
+                    b => b.MigrationsAssembly("CodeBase.EntityFrameworkCore")
+                )
+            );
+
+ConfigureServices(builder.Services, builder.Configuration);
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -43,12 +55,13 @@ app.Run();
 
 void ConfigureServices(IServiceCollection services, IConfiguration configuration)
 {
-
     // Register AutoMapper
     services.AddAutoMapper(typeof(MappingProfile));
 
     services.AddScoped<IUnitOfWork, EFUnitOfWork>();
     services.AddScoped<IBaseRepository<ExampleEntity, int>, BaseRepository<ExampleEntity, int>>();
-    services.AddScoped<IExampleAppService, ExampleAppService>();
+    services.AddScoped<IBaseRepository<Student, int>, BaseRepository<Student, int>>();
 
+    services.AddScoped<IExampleAppService, ExampleAppService>();
+    services.AddScoped<IStudentAppService, StudentAppService>();
 }
